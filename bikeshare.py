@@ -8,7 +8,7 @@ CITY_DATA = { 'chicago': 'data/chicago.csv', 'Chicago': 'data/chicago.csv',
               'new york city': 'data/new_york_city.csv', 'washington': 'data/washington.csv',
              'Washington': 'data/washington.csv' }
 
-#Function to figure out the filtering requirements of the user
+#Function to figure out the filtering requirements of the user such as finding the city, month, and day to analyze
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -72,7 +72,7 @@ def get_filters():
     #Returning the city, month and day selections
     return city, month, day
 
-#Function to load data from .csv files
+#Function to load data from .csv files and read data from files
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -111,7 +111,8 @@ def load_data(city, month, day):
     #Returns the selected file as a dataframe (df) with relevant columns
     return df
 
-#Function to calculate all the time-related statistics for the chosen data
+#Function to calculate all the time-related statistics for the chosen data 
+#High level statistics to find the most frequent times of travel, omst popular months, days, and times to travel as well
 def time_stats(df):
     """Displays statistics on the most frequent times of travel.
     Args:
